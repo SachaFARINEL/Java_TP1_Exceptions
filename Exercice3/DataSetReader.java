@@ -10,7 +10,6 @@ public class DataSetReader {
     double[] data;
 
     public DataSetReader() {
-        super();
     }
 
     public double[] readFile(String filename) throws IOException {
@@ -35,7 +34,11 @@ public class DataSetReader {
         if (in.hasNextDouble()) {
             this.data[i] = in.nextDouble();
         } else {
+<<<<<<< HEAD
             throw new BadDataException("DatasetReader.readValue() : La donnée n°" + (i + 1) + " n'est pas de type Double");
+=======
+            throw new BadDataException("DatasetReader.readValue() : La donnée n°" + (i+1) + " n'est pas de type Double");
+>>>>>>> a1746536e4f20450896c6a66e76b7aa375e716f3
         }
     }
 }
